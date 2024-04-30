@@ -1,0 +1,62 @@
+<!--Pesquisa e mostruário de vagas-->
+    <main>
+
+        <div id="top-container" class="container-fluid">
+            <!--Título e Subtítulo-->
+            <h1 class="text-center" id="main-title">Encontre o emprego dos seus sonhos</h1>
+            <p class="text-center" id="main-subtitle">Somos o site com mais vagas de tecnologiano mercado, direcionadas a home office</p>
+
+            <!--Barra de pesquisa-->
+            <form class="row" id="search-form" action="/" method="get">
+
+                <div class="col-md-10 form-group">
+                    
+                    <input type="text" class="form-control" id="job" name="job" placeholder="Digite a vaga que está buscando" >
+                    
+                  </div>
+
+                  <div class="col-md-2">
+
+                    <button type="submit" class="btn btn-primary">Procurar</button>
+
+                  </div>
+
+            </form>
+        </div>
+
+        <div id="jobs-container" class="container">
+
+         <div class="row">
+
+          <div class="col-md-12">
+
+            {{#if search}}
+
+            <h2 id="job-list-title">Buscando vagas que contem: {{search}}</h2>
+
+            {{/if}}
+
+            <h2 id="job-list-title">Veja nossas vagas</h2>
+
+            <ul id="job-list" class="list-group">
+              
+              {{#each jobs}}
+              <li class="list-group-item {{#if dataValues.new_jobs}} new-job {{/if}}">
+                <img src="/src/img/company 1.png" alt="company">
+                <p>{{dataValues.company}}</p>
+                <h2>{{dataValues.title}}</h2>
+                <p>R${{dataValues.salary}}</p>
+                <span class="new-job-label">Nova</span>
+                  <a href="/jobs/view/{{dataValues.id}}" class="btn btn-primary">Ver vaga</a>
+              </li>
+              {{/each}}
+
+            </ul>
+
+          </div>
+
+         </div>
+          
+        </div>
+
+    </main>

@@ -1,0 +1,28 @@
+{
+  "name": "job_finder",
+  "version": "1.0.0",
+  "description": "Programa para programadores buscarem vagas de emprego",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "dev",
+    "jobs",
+    "dev",
+    "opportunity"
+  ],
+  "author": "Dário Bastos",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8",
+    "sequelize": "^6.37.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

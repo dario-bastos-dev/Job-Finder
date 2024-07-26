@@ -5,7 +5,6 @@ const path = require("path")
 const db = require(`./db/conection`);
 const bodyParser = require(`body-parser`)
 const Job = require("./models/Job");
-const { where } = require("sequelize");
 const op = require("sequelize").Op
 
 const PORT = 3000;
@@ -44,6 +43,7 @@ app.get(`/`, (req, res) => {
 
     Job.findAll({order:
       ["createdAt"]})
+      
       .then(jobs => {
         
         res.render(`index`, {

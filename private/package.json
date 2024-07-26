@@ -4,7 +4,7 @@
   "description": "Programa para programadores buscarem vagas de emprego",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [
     "dev",
